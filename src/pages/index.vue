@@ -123,14 +123,6 @@
               :exchange-selected="currencySelected"
               :exchanges="currencies"
             />
-            <LandingExchange
-              title="Get"
-              name="get"
-              type="number"
-              default-value="0.10901"
-              :exchange-selected="cryptoSelected"
-              :exchanges="cryptocurrencies"
-            />
             <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
           </div>
         </div>
@@ -316,13 +308,19 @@
 <script>
 import BaseSection from '@/components/base/Section.vue'
 import LandingCryptoStatistic from '@/components/landing/CryptoStatistic.vue'
+import LandingBuyTradeImage from '@/components/landing/Exchange.vue'
+import LandingExchange from '@/components/landing/BuyTradeImage.vue'
+import BaseButton from '@/components/base/Button.vue'
 import aosMixin from '@/mixins/aos'
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
   components: {
     BaseSection,
-    LandingCryptoStatistic
+    LandingCryptoStatistic,
+    LandingBuyTradeImage,
+    LandingExchange,
+    BaseButton
   },
   data() {
     return {

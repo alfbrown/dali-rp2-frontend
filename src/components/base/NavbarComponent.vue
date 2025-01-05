@@ -64,19 +64,12 @@
   </nav>
 </template>
 <script>
-import ChevronUp from 'vue-material-design-icons/ChevronUp.vue'
-import ChevronDown from 'vue-material-design-icons/ChevronDown.vue'
-import Menu from 'vue-material-design-icons/Menu.vue'
-import Close from 'vue-material-design-icons/Close.vue'
+
 import BaseButton from '@/components/base/Button.vue'
 import NavLink from '@/components/NavLink.vue'
 
 export default {
   components: {
-    ChevronUp,
-    ChevronDown,
-    Menu,
-    Close,
     BaseButton,
     NavLink
   },

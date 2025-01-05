@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import ChevronDownIcon from 'vue-material-design-icons/ChevronDown.vue'
 import ChevronUpIcon from 'vue-material-design-icons/ChevronUp.vue'
 import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue'
@@ -23,6 +22,8 @@ const components = {
   CloseIcon,
 }
 
-Object.entries(components).forEach(([name, component]) => {
-  Vue.component(name, component)
-})
+export function registerIcons(app) {
+  Object.entries(components).forEach(([name, component]) => {
+    app.component(name, component)
+  })
+}
