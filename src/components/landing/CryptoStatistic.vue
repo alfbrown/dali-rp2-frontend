@@ -53,13 +53,15 @@
 import PlusThickIcon from 'vue-material-design-icons/PlusThick.vue'
 import MinusThickIcon from 'vue-material-design-icons/MinusThick.vue'
 import LineChart from '@/components/LineChart.vue'
+import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue'
 
 export default {
   name: 'LandingCryptoStatistic',
   components: {
     PlusThickIcon,
     MinusThickIcon,
-    LineChart
+    LineChart,
+    ChevronRightIcon
   },
   props: {
     title: {
