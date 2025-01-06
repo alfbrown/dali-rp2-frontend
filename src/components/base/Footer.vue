@@ -68,7 +68,9 @@
   </footer>
 </template>
 <script>
+import NavLink from '@/components/NavLink.vue';
 export default {
   name: 'BaseFooter',
+  components: {NavLink}
 }
 </script>

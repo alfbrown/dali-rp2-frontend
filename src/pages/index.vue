@@ -324,7 +324,11 @@ import BaseAccordion from '@/components/base/Accordion.vue';
 import LandingStep from '@/components/landing/Step.vue';
 import LandingListItem from '@/components/landing/ListItem.vue';
 import ArrowUpIcon from 'vue-material-design-icons/ArrowUp.vue';
+import ChevronDownIcon from 'vue-material-design-icons/ChevronDown.vue'
 import aosMixin from '@/mixins/aos';
+import BaseButton from '@/components/base/Button.vue';
+import LandingPartnerImage from '@/components/landing/PartnerImage.vue';
+
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
@@ -334,7 +338,10 @@ export default {
     BaseAccordion,
     LandingStep,
     ArrowUpIcon,
-    LandingCryptoStatistic
+    LandingCryptoStatistic,
+    BaseButton,
+    LandingPartnerImage,
+    ChevronDownIcon
   },
   data() {
     return {
