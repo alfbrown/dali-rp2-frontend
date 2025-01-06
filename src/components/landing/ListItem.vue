@@ -8,7 +8,11 @@
   </li>
 </template>
 <script>
-export default {
+import CheckCircleIcon from 'vue-material-design-icons/CheckCircle.vue'
+  export default {
+  components: {
+    CheckCircleIcon
+  },
   name: 'LandingListItem',
   props: {
     title: {
