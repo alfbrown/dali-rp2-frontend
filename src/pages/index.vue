@@ -41,7 +41,7 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              :src="require('@/assets/img/hero-image.webp')"
+              :src="heroImage"
               class="-mt-4"
               alt=""
             />
@@ -102,39 +102,10 @@
       </div>
     </section>
 
-    <!-- Buy and trade section -->
+    <!-- Upload Documents section -->
     <section class="w-full my-24">
       <BaseSection>
-        <LandingBuyTradeImage class="sm:hidden mb-8" />
-        <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
-          <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Buy & trade on the <br class="hidden sm:block" />
-            original crypto exchange.
-          </h2>
-          <p class="paragraph">
-            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
-          </p>
-          <div class="space-y-6 lg:pr-12">
-            <LandingExchange
-              title="Amount"
-              name="amount"
-              type="number"
-              default-value="5.000"
-              :exchange-selected="currencySelected"
-              :exchanges="currencies"
-            />
-            <LandingExchange
-              title="Get"
-              name="get"
-              type="number"
-              default-value="0.10901"
-              :exchange-selected="cryptoSelected"
-              :exchanges="cryptocurrencies"
-            />
-            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
-          </div>
-        </div>
-        <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
+        <UploadDocuments/>
       </BaseSection>
     </section>
 
@@ -328,6 +299,8 @@ import ChevronDownIcon from 'vue-material-design-icons/ChevronDown.vue'
 import aosMixin from '@/mixins/aos';
 import BaseButton from '@/components/base/Button.vue';
 import LandingPartnerImage from '@/components/landing/PartnerImage.vue';
+import UploadDocuments from '@/components/landing/UploadDocuments.vue';
+import heroImage from '@/assets/img/hero-image.webp';
 
 export default {
   name: 'IndexPage',
@@ -341,7 +314,8 @@ export default {
     LandingCryptoStatistic,
     BaseButton,
     LandingPartnerImage,
-    ChevronDownIcon
+    ChevronDownIcon,
+    UploadDocuments
   },
   data() {
     return {
@@ -512,6 +486,7 @@ export default {
             'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
         },
       ],
+      heroImage,
     }
   },
 }
