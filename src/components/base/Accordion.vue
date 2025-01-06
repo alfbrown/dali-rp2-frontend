@@ -20,7 +20,13 @@
   </li>
 </template>
 <script>
+import ChevronUpIcon from 'vue-material-design-icons/ChevronUp.vue'
+import ChevronDownIcon from 'vue-material-design-icons/ChevronDown.vue'
 export default {
+  components: {
+    ChevronUpIcon,
+    ChevronDownIcon
+  },
   name: 'BaseAccordion',
   props: {
     accordion: {

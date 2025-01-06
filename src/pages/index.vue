@@ -207,15 +207,19 @@
             </p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
+            <BaseButton class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
               Get Started
             </BaseButton>
-            <BaseButton class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
+            <BaseButton class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
               Learn More
             </BaseButton>
           </div>
         </div>
-        <LandingTradingToolImage data-aos="fade-left" class="hidden sm:block" />
+        <div class="col-span-12 lg:col-span-6" v-bind="$attrs">
+    <div class="w-full sm:mt-20 xl:mt-0">
+      <img src='@/assets/img/advanced-trading-tools.webp' class="w-full" alt="" />
+    </div>
+  </div>
       </div>
     </section>
 
@@ -316,12 +320,20 @@
 <script>
 import BaseSection from '@/components/base/Section.vue'
 import LandingCryptoStatistic from '@/components/landing/CryptoStatistic.vue'
-import aosMixin from '@/mixins/aos'
+import BaseAccordion from '@/components/base/Accordion.vue';
+import LandingStep from '@/components/landing/Step.vue';
+import LandingListItem from '@/components/landing/ListItem.vue';
+import ArrowUpIcon from 'vue-material-design-icons/ArrowUp.vue';
+import aosMixin from '@/mixins/aos';
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
   components: {
     BaseSection,
+    LandingListItem,
+    BaseAccordion,
+    LandingStep,
+    ArrowUpIcon,
     LandingCryptoStatistic
   },
   data() {
