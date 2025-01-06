@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8 h-screen w-max">
-    <div class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[75rem]">
+  <div class="p-8 h-max md:w-max w-auto">
+    <div class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[25rem] md:w-[50rem] lg:w-[75rem]">
       <h2 class="text-lg font-bold mb-4">Upload Your Documents</h2>
 
       <!-- Error/Success Messages -->
@@ -11,7 +11,7 @@
         {{ successMessage }}
       </div>
 
-      <form @submit.prevent="handleSubmit" class="h-[500rem]">
+      <form @submit.prevent="handleSubmit">
         <div class="mb-4">
           <label class="block text-sm font-medium mb-2">Select Country</label>
           <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a country"
@@ -78,7 +78,7 @@
             class="p-button-success" />
         </div>
 
-        <div class="mt-4 flex justify-end">
+        <div class="flex justify-end mt-4">
           <Button type="submit" :loading="processing" :disabled="processing" label="Process Files"
             class="p-button-primary" />
         </div>
