@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8 h-max md:w-max w-auto">
-    <div class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[25rem] md:w-[50rem] lg:w-[73rem]">
+  <div class="p-8 h-screen w-max">
+    <div id="input-form" class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[75rem]">
       <h2 class="text-lg font-bold mb-4">Upload Your Documents</h2>
 
       <!-- Error/Success Messages -->

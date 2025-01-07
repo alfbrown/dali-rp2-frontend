@@ -23,17 +23,15 @@
             data-aos-delay="700"
             class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
           >
-            <BaseButton
-              class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
-            >
-              Get Started
-            </BaseButton>
-            <BaseButton
-              class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
-            >
-              <span>Download App</span>
-              <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
-            </BaseButton>
+          <a
+            v-smooth-scroll
+            data-aos="flip-down"
+            data-aos-delay="150"
+            href="#input-form"
+            class="aos-animate aos-init bg-gradient-to-r border border-[#0c66ee] from-[#468ef9] max-w-full px-8 py-4 rounded-full text-white to-[#0c66ee]"
+          >
+            <span>Get Started</span>
+          </a>
           </div>
         </div>
         <div class="hidden sm:block col-span-12 lg:col-span-6">
@@ -178,9 +176,15 @@
             </p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            <BaseButton class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
-              Get Started
-            </BaseButton>
+            <a
+              v-smooth-scroll
+              data-aos="flip-down"
+              data-aos-delay="150"
+              href="#input-form"
+              class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
+            >
+              <span>Get Started</span>
+            </a>
             <BaseButton class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300 bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
               Learn More
             </BaseButton>
@@ -188,7 +192,7 @@
         </div>
         <div class="col-span-12 lg:col-span-6" v-bind="$attrs">
     <div class="w-full sm:mt-20 xl:mt-0">
-      <img src='@/assets/img/advanced-trading-tools.webp' class="w-full" alt="" />
+      <img src='@/assets/img/advanced-trading-tools.jpg' class="w-full" alt="" />
     </div>
   </div>
       </div>
@@ -199,7 +203,7 @@
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('@/assets/img/industry-leading-security.webp')" class="w-full" alt="" />
+            <img :src="require('@/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
@@ -259,7 +263,7 @@
       <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('@/assets/img/faq.webp')" class="w-full" alt="" />
+            <img :src="require('@/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
@@ -295,12 +299,11 @@ import BaseAccordion from '@/components/base/Accordion.vue';
 import LandingStep from '@/components/landing/Step.vue';
 import LandingListItem from '@/components/landing/ListItem.vue';
 import ArrowUpIcon from 'vue-material-design-icons/ArrowUp.vue';
-import ChevronDownIcon from 'vue-material-design-icons/ChevronDown.vue'
 import aosMixin from '@/mixins/aos';
 import BaseButton from '@/components/base/Button.vue';
 import LandingPartnerImage from '@/components/landing/PartnerImage.vue';
 import UploadDocuments from '@/components/landing/UploadDocuments.vue';
-import heroImage from '@/assets/img/hero-image.webp';
+import heroImage from '@/assets/img/crypto.png';
 
 export default {
   name: 'IndexPage',
@@ -314,7 +317,6 @@ export default {
     LandingCryptoStatistic,
     BaseButton,
     LandingPartnerImage,
-    ChevronDownIcon,
     UploadDocuments
   },
   data() {

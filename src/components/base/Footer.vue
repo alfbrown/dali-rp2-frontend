@@ -10,13 +10,7 @@
               <img :src="require('@/assets/img/logo/nefa.svg')" class="w-24 -mt-2" alt="Nefa Logo" />
             </a>
           </div>
-          <ul class="space-y-4">
-            <NavLink name="Cryptocurrency" url="#" />
-            <NavLink name="Exchanges" url="#" />
-            <NavLink name="Watchlist" url="#" />
-            <NavLink name="Portfolio" url="#" />
-            <NavLink name="NFT" url="#" />
-          </ul>
+          
         </div>
         <div
           class="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]"
