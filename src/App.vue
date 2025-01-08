@@ -4,7 +4,7 @@
       <div
         class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient"
       ></div>
-      <BaseNavbar />
+      <!--BaseNavbar /-->
 
       <main class="text-neutral-800">
         <Index />
@@ -16,13 +16,13 @@
 </template>
 <script>
 import Index from '@/pages/index.vue';
-import BaseFooter from '@/components/base/Footer.vue'
-import BaseNavbar from '@/components/base/NavbarComponent.vue';
+import BaseFooter from '@/components/base/Footer.vue';
+// import BaseNavbar from '@/components/base/NavbarComponent.vue'
 export default {
   name: 'App',
   components: {
     Index,
-    BaseNavbar,
+   // BaseNavbar,
     BaseFooter
   }
 }
