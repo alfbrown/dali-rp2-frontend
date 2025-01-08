@@ -67,7 +67,7 @@
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('@/assets/img/pattern/star.png')"
-          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
+          class="hidden sm:block absolute top-20 sm:top-20 right-16 lg:right-0 lg:left-[30rem] w-8"
         />
       </BaseSection>
     </section>
@@ -303,7 +303,7 @@ import aosMixin from '@/mixins/aos';
 import BaseButton from '@/components/base/Button.vue';
 import LandingPartnerImage from '@/components/landing/PartnerImage.vue';
 import UploadDocuments from '@/components/landing/UploadDocuments.vue';
-import heroImage from '@/assets/img/crypto.png';
+import heroImage from '@/assets/img/tax-calculator.png';
 
 export default {
   name: 'IndexPage',
