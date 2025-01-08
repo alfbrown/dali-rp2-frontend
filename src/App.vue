@@ -52,6 +52,7 @@ export default {
   background: linear-gradient(136.91deg, #468ef9 -12.5%, #0c66ee 107.5%);
 }
 .text-gradient {
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
