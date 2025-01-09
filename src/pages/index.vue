@@ -221,7 +221,7 @@
           </div>
         </div>
         <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
+          <h2 class="text-4xl font-semibold">About Us</h2>
           <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Safety, security and compliance">
               <p class="text-sm text-gray-700 leading-relaxed">
@@ -500,21 +500,21 @@ export default {
       steps: [
         {
           img: 'sign-up.png',
-          title: 'Sign Up',
+          title: 'Upload',
           description:
-            'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile',
+            'Upload your crytocurrency transaction history from exchanges, wallets, and other sources to our platform',
         },
         {
           img: 'fund.png',
-          title: 'Fund',
+          title: 'Generate',
           description:
-            'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet',
+            'Generate your tax reports using our platform. We support FIFO, LIFO, and HIFO methods for calculating taxes',
         },
         {
           img: 'buy-crypto.png',
-          title: 'Buy Crypto',
+          title: 'Download',
           description:
-            'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
+            'Download your generated tax summary and report your capital gains and losses on your tax return.',
         },
       ],
       heroImage,
