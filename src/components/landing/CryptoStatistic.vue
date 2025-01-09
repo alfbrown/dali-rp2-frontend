@@ -1,10 +1,10 @@
 <template>
   <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
-    <div class="w-full flex items-center justify-between">
-      <span class="font-medium">{{ title }}</span>
+    <div class="w-full flex items-center justify-between 3xl:h-12 6xl:h-16">
+      <span class="font-medium text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]">{{ title }}</span>
       <button
         href="#"
-        class="px-3 py-1 text-sm font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
+        class="px-3 py-1 text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
       >
         <span>More</span>
         <ChevronRightIcon :size="16" />
@@ -16,20 +16,20 @@
           <table class="min-w-full">
             <thead>
               <tr>
-                <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
+                <th class="text-left text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium text-gray-500">Name</th>
+                <th class="text-left text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium text-gray-500">Price</th>
+                <th class="hidden sm:block text-left text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium text-gray-500">Chart</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="data in datasets" :key="data.id" class="border-b border-gray-200">
-                <td class="py-4 whitespace-nowrap">
+                <td class="py-4 whitespace-nowrap text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]">
                   <div class="flex items-center space-x-2">
                     <img :src="require(`@/assets/img/crypto-icon/${data.logo}`)" alt="" />
                     <span>{{ data.name }}</span>
                   </div>
                 </td>
-                <td class="py-4 whitespace-nowrap">
+                <td class="py-4 whitespace-nowrap text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]">
                   <div class="flex items-center">
                     <PlusThickIcon v-if="data.increase" :size="14" class="text-emerald-500" />
                     <MinusThickIcon v-else :size="14" class="text-red-500" />
@@ -38,7 +38,7 @@
                 </td>
                 <td class="hidden sm:block whitespace-nowrap">
                   <div>
-                    <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" />
+                    <LineChart class="-mx-2" :datasets="data.data" :increase="data.increase" />
                   </div>
                 </td>
               </tr>
