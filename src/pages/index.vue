@@ -2,33 +2,33 @@
   <div class="w-full">
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
-      <BaseSection>
-        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
+      <BaseSection class="mx-20">
+        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 2xl:mt-12 4xl:mt-16 5xl:mt-24 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
             ></span
           >
           <h1
             data-aos="fade-right"
             data-aos-once="true"
-            class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
+            class="text-[2.5rem] sm:text-5xl xl:text-6xl 2xl:text-7xl 4xl:text-[5rem] 5xl:text-8xl 6xl:text-9xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
           >
           <span class="text-header-gradient">Free</span> Cryptocurrency <span class="text-header-gradient">Cost Basis</span> Calculator
           </h1>
-          <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
+          <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block text-base 2xl:text-lg 3xl:text-[1.4rem] 4xl:text-2xl 5xl:text-[1.8rem] 6xl:text-[2.5rem] 6xl:leading-[3rem]">
             Break free from extra fees. Calculate your crypto cost basis across multiple platforms.
           </p>
           <div
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="700"
-            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2 2xl:mt-4 4xl:mt-16"
           >
           <a
             v-smooth-scroll
             data-aos="flip-down"
             data-aos-delay="150"
             href="#input-form"
-            class="aos-animate aos-init bg-gradient-to-r border border-[#0c66ee] from-[#468ef9] max-w-full px-8 py-4 rounded-full text-white to-[#0c66ee]"
+            class="aos-animate aos-init bg-gradient-to-r border border-[#0c66ee] from-[#468ef9] px-[7%] py-[3.5%] 3xl:py-[4%] rounded-full text-white to-[#0c66ee] text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2.2rem]"
           >
             <span>Get Started</span>
           </a>
@@ -49,25 +49,25 @@
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('@/assets/img/pattern/ellipse-1.png')"
-          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
+          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-[1.8%]"
         />
         <img
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('@/assets/img/pattern/ellipse-2.png')"
-          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
+          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] 2xl:right-[36rem] 3xl:right-[40rem] 4xl:right-[44rem] 5xl:right-[48rem] 6xl:right-[66rem] w-[1.8%]"
         />
         <img
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('@/assets/img/pattern/ellipse-3.png')"
-          class="hidden sm:block absolute bottom-56 right-24 w-6"
+          class="hidden sm:block absolute bottom-56 right-24 w-[1.8%]"
         />
         <img
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('@/assets/img/pattern/star.png')"
-          class="hidden sm:block absolute top-20 sm:top-20 right-16 lg:right-0 lg:left-[30rem] w-8"
+          class="hidden sm:block absolute top-20 sm:top-20 right-16 lg:right-0 lg:left-[30rem] 2xl:left-[35rem] 4xl:left-[38.5rem] 5xl:left-[46rem] 6xl:left-[61rem] w-[2.5%]"
         />
       </BaseSection>
     </section>
