@@ -499,7 +499,7 @@ export default {
             'Generate your tax reports using our platform. We support FIFO, LIFO, and HIFO methods for calculating taxes',
         },
         {
-          img: 'buy-crypto.png',
+          img: 'download.png',
           title: 'Download',
           description:
             'Download your generated tax summary and report your capital gains and losses on your tax return.',
