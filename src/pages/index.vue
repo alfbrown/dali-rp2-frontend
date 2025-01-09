@@ -462,19 +462,7 @@ export default {
         {
           title: 'How does this work?',
           description:
-              "Our platform simplifies cryptocurrency tax calculations by providing an intuitive, web-based interface built on the robust, privacy-focused " +
-              "<a href='https://github.com/eprbell/rp2' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>RP2</a> " +
-              "and DaLI tools.\n\n" +
-              "Key features include:\n\n" +
-              "• Calculate taxes using FIFO, LIFO, or HIFO methods\n" +
-              "• Support for US, Japan, Europe, and other regions\n" +
-              "• Privacy-focused: no data storage on our servers\n" +
-              "• Free to use\n\n" +
-              "The process is simple:\n" +
-              "1. Choose your process (DaLI, RP2, or Combined)\n" +
-              "2. Prepare and upload your transaction files\n" +
-              "3. Download your results, including Form 8949\n\n" +
-              "While we strive for accuracy, please verify results with commercial platforms if needed.",
+              "Our platform offers a simple, web-based interface for calculating cryptocurrency taxes using the powerful, privacy-focused tools DaLI and RP2. Whether you’re an individual investor, tax professional, or business, you can choose to run DaLI, RP2, or a combined process by uploading your transaction and configuration CSV files directly on our site. We handle all the technical details without storing your data, ensuring your privacy and security. Once processed, you’ll receive a ZIP file with your tax results, including Form 8949. Best of all, our service is completely free to use. For a detailed walkthrough, please visit our: <a href='https://blog.com' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>Blog Post</a>"
         },
         {
           title: 'How much does this cost?',
