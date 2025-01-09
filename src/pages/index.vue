@@ -111,19 +111,33 @@
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Collaborators and Attribution</h3>
-        <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
-        <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
-          <LandingPartnerImage
-            v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
-            :key="img"
-            :img="img"
-          />
+        <p data-aos="flip-down" class="paragraph">This project builds upon the work of many talented individuals and organizations</p>
+        <div data-aos="fade-up" class="flex flex-wrap items-center justify-center gap-6">
+          <div class="text-center p-4">
+            <p class="text-gray-700">
+              This project builds upon: <a href="https://github.com/eprbell" target="_blank" rel="noopener noreferrer" 
+              class="text-blue-600 hover:text-blue-800 underline">DALI and RP2</a>
+            </p>
+          </div>
+          <!-- Add additional attributions here -->
+          <div class="text-center p-4">
+            <p class="text-gray-700">
+              UI Design: Based on design by <a href="https://github.com/RSurya99/nefa" target="_blank" rel="noopener noreferrer" 
+              class="text-blue-600 hover:text-blue-800 underline">NEFA</a>
+            </p>
+          </div>
+          <div class="text-center p-4">
+            <p class="text-gray-700">
+              Images: Designed by <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer" 
+              class="text-blue-600 hover:text-blue-800 underline">Freepik</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Credit card section -->
-    <section class="w-full my-36">
+    <!--section class="w-full my-36">
       <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
@@ -146,10 +160,10 @@
           >
         </div>
       </BaseSection>
-    </section>
+    </section-->
 
     <!-- Advanced trading tools section -->
-    <section class="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
+    <!--section class="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
@@ -196,7 +210,7 @@
     </div>
   </div>
       </div>
-    </section>
+    </section-->
 
     <!-- Industry-leading security section -->
     <section class="w-full my-24">
@@ -300,8 +314,7 @@ import LandingStep from '@/components/landing/Step.vue';
 import LandingListItem from '@/components/landing/ListItem.vue';
 import ArrowUpIcon from 'vue-material-design-icons/ArrowUp.vue';
 import aosMixin from '@/mixins/aos';
-import BaseButton from '@/components/base/Button.vue';
-import LandingPartnerImage from '@/components/landing/PartnerImage.vue';
+//import BaseButton from '@/components/base/Button.vue';
 import UploadDocuments from '@/components/landing/UploadDocuments.vue';
 import heroImage from '@/assets/img/tax-calculator.png';
 
@@ -315,8 +328,7 @@ export default {
     LandingStep,
     ArrowUpIcon,
     LandingCryptoStatistic,
-    BaseButton,
-    LandingPartnerImage,
+   // BaseButton,
     UploadDocuments
   },
   data() {
@@ -448,24 +460,41 @@ export default {
       ],
       accordions: [
         {
-          title: 'Why should I choose NEFA?',
+          title: 'How does this work?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+              "Our platform simplifies cryptocurrency tax calculations by providing an intuitive, web-based interface built on the robust, privacy-focused " +
+              "<a href='https://github.com/eprbell/rp2' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>RP2</a> " +
+              "and DaLI tools.\n\n" +
+              "Key features include:\n\n" +
+              "• Calculate taxes using FIFO, LIFO, or HIFO methods\n" +
+              "• Support for US, Japan, Europe, and other regions\n" +
+              "• Privacy-focused: no data storage on our servers\n" +
+              "• Free to use\n\n" +
+              "The process is simple:\n" +
+              "1. Choose your process (DaLI, RP2, or Combined)\n" +
+              "2. Prepare and upload your transaction files\n" +
+              "3. Download your results, including Form 8949\n\n" +
+              "While we strive for accuracy, please verify results with commercial platforms if needed.",
         },
         {
-          title: 'How secure is NEFA?',
+          title: 'How much does this cost?',
           description:
             "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
         },
         {
-          title: 'Do I have to buy a whole Bitcoin?',
+          title: "I am a business or tax professional, can I use this?",
+          description:
+            "For now, it is free for everyone. We may make changes to this, which will depend on use or any unexpected overhead costs.",
+        },
+        {
+          title: 'How do I reach out for support?',
           description:
             "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
         },
         {
-          title: 'How do I actually buy Bitcoin?',
+          title: "What's next?",
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "With the upcoming IRS regulation changes there are additional updates and modifications that will need to be made for this software to maintain relevance. While we can, we aim to continue to make this free, but it is completely up to our users on next steps. If there is continued Interest, we will continue to enhance the site for years to come.",
         },
       ],
       steps: [
