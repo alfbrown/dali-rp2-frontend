@@ -1,7 +1,7 @@
 <template>
-  <div class="p-8 h-max md:w-max w-auto">
-    <div class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[25rem] md:w-[50rem] lg:w-[73rem]">
-      <h2 class="text-lg font-bold mb-4">Upload Your Documents</h2>
+  <div class="md:p-8 w-[24rem] md:w-[44rem] lg:w-[82rem] xl:w-[85rem] 2xl:w-[95rem] 3xl:w-[108rem] 4xl:w-[115rem] 5xl:w-[129rem] 6xl:w-[175rem]">
+    <div class="p-6 bg-white shadow-md">
+      <h2 class="2xl:text-2xl 4xl:text-4xl font-bold mb-4 text-lg">Upload Your Documents</h2>
 
       <!-- Error/Success Messages -->
       <div v-if="errorMessage" class="mb-4 p-4 bg-red-100 text-red-700 rounded">
@@ -11,16 +11,16 @@
         {{ successMessage }}
       </div>
 
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="handleSubmit" class="2xl:text-lg 4xl:text-2xl">
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Select Country</label>
+          <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Select Country</label>
           <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a country"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedCountry }" />
           <small v-if="submitted && !selectedCountry" class="text-red-500">Country is required</small>
         </div>
 
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Select Process</label>
+          <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Select Process</label>
           <Dropdown v-model="selectedProcess" :options="processes" optionLabel="name" placeholder="Select a process"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedProcess }" />
           <small v-if="submitted && !selectedProcess" class="text-red-500">Process is required</small>
@@ -29,10 +29,10 @@
         <div class="mb-4" v-if="showSpotPriceOption">
           <div class="flex items-center">
             <Checkbox v-model="spotPrice" binary inputId="spot-price" />
-            <label for="spot-price" class="ml-2 text-sm">Use Internet Spot Price</label>
+            <label for="spot-price" class="ml-2 text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]">Use Internet Spot Price</label>
           </div>
           <div v-if="spotPrice" class="mt-2">
-            <label class="block text-sm font-medium mb-2">Select Platform</label>
+            <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Select Platform</label>
             <Dropdown v-model="selectedPlatform" :options="platforms" optionLabel="name" placeholder="Select a platform"
               class="w-full" :class="{ 'p-invalid': submitted && spotPrice && !selectedPlatform }" />
             <small v-if="submitted && spotPrice && !selectedPlatform" class="text-red-500">
@@ -42,11 +42,11 @@
         </div>
 
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Accounting Options</label>
+          <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Accounting Options</label>
           <div class="flex flex-col gap-2">
             <div v-for="option in accountingOptions" :key="option.value">
-              <RadioButton v-model="selectedAccounting" :value="option.value" :inputId="option.value" />
-              <label :for="option.value" class="ml-2 text-sm">{{ option.name }}</label>
+              <RadioButton v-model="selectedAccounting" :value="option.value" :inputId="option.value"/>
+              <label :for="option.value" class="ml-2 text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]">{{ option.name }}</label>
             </div>
           </div>
           <small v-if="submitted && !selectedAccounting" class="text-red-500">
@@ -56,11 +56,11 @@
 
         <FileUpload ref="fileUpload" mode="advanced" :multiple="true" :accept="acceptedFileTypes"
           :maxFileSize="50000000" @select="onFileSelect" @remove="onFileRemove" :auto="true" chooseLabel="Select Files"
-          class="w-full" :class="{ 'p-invalid': submitted && !hasRequiredFiles }">
+          class="w-full custom-button" :class="{ 'p-invalid': submitted && !hasRequiredFiles }">
           <template #empty>
             <div class="flex flex-col items-center justify-center p-6">
               <i class="pi pi-cloud-upload text-4xl mb-4"></i>
-              <p class="text-gray-500">Drag and drop files here or click to upload</p>
+              <p class="text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem] text-gray-500">Drag and drop files here or click to upload</p>
             </div>
           </template>
         </FileUpload>
@@ -70,7 +70,7 @@
 
         <div v-if="processing" class="mt-4">
           <ProgressBar mode="indeterminate" class="mb-2" />
-          <p class="text-sm text-gray-600">Processing files... Please wait.</p>
+          <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-600">Processing files... Please wait.</p>
         </div>
 
         <div v-if="downloadUrl" class="mt-4">
@@ -80,7 +80,7 @@
 
         <div class="flex justify-end mt-4">
           <Button type="submit" :loading="processing" :disabled="processing" label="Process Files"
-            class="p-button-primary" />
+            class="p-button-primary custom-button text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]" />
         </div>
       </form>
     </div>
@@ -341,3 +341,20 @@ export default {
   }
 };
 </script>
+
+<style>
+
+.custom-button {
+  border: 1px solid #0c66ee !important;
+  color: white !important;
+  background: linear-gradient(to right, #468ef9, #0c66ee) !important;
+}
+:root {
+  --p-radiobutton-checked-background: linear-gradient(to right, #468ef9, #0c66ee) !important;
+  --p-radiobutton-checked-hover-background: linear-gradient(to right, #468ef9, #0c66ee) !important;
+  --p-radiobutton-checked-border-color: linear-gradient(to right, #468ef9, #0c66ee) !important;
+  --p-radiobutton-hover-border-color: linear-gradient(to right, #468ef9, #0c66ee) !important;
+}
+
+
+</style>
