@@ -2,7 +2,7 @@
   <li class="relative border-b-2 border-gray-200 ">
     <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
       <div class="flex items-center justify-between">
-        <span class="font-medium text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]">{{ accordion.title }}</span>
+        <span class="font-medium text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[1.9rem]">{{ accordion.title }}</span>
         <ChevronUpIcon v-if="selected" :size="20" />
         <ChevronDownIcon v-else :size="20" />
       </div>

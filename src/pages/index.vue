@@ -74,7 +74,7 @@
 
     <!-- Crypto statistic section -->
     <section
-      class="6xl:max-w-[2710px] 5xl:max-w-[1990px] 4xl:max-w-[1750px] 3xl:max-w-[1630px] 2xl:max-w-[1430px] sm:max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
+      class="6xl:max-w-[2410px] 5xl:max-w-[1990px] 4xl:max-w-[1750px] 3xl:max-w-[1630px] 2xl:max-w-[1430px] sm:max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
         <LandingCryptoStatistic
@@ -109,7 +109,7 @@
 
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 md:mx-0 my-24 shadow sm:rounded-2xl md:rounded-none overflow-hidden">
-      <div class="w-full text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem] px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
+      <div class="w-full text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[1.9rem] px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 data-aos="flip-down" class="text-neutral-800 font-semibold">Collaborators and Attribution</h3>
         <p data-aos="flip-down" class="paragraph">This project builds upon the work of many talented individuals and organizations</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center gap-6">
@@ -300,7 +300,7 @@
         class="px-[2%] py-[1%] flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700 text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2.2rem]"
       >
         <span>Back to top</span>
-        <ArrowUpIcon />
+        <ArrowUpIcon :size="12"/>
       </a>
     </div>
   </div>

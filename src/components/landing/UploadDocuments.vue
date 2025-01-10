@@ -1,5 +1,5 @@
 <template>
-  <div class="md:p-8 w-[24rem] md:w-[44rem] lg:w-[63rem] xl:w-[85rem] 2xl:w-[95rem] 3xl:w-[108rem] 4xl:w-[115rem] 5xl:w-[129rem] 6xl:w-[175rem]">
+  <div class="md:p-8 w-[24rem] md:w-[44rem] lg:w-[63rem] xl:w-[85rem] 2xl:w-[95rem] 3xl:w-[108rem] 4xl:w-[115rem] 5xl:w-[129rem] 6xl:w-[155rem]">
     <div class="p-6 bg-white shadow-md">
       <h2 class="2xl:text-2xl 4xl:text-4xl font-bold mb-4 text-lg">Upload Your Documents</h2>
 
@@ -60,7 +60,7 @@
           <template #empty>
             <div class="flex flex-col items-center justify-center p-6">
               <i class="pi pi-cloud-upload text-4xl mb-4"></i>
-              <p class="text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem] text-gray-500">Drag and drop files here or click to upload</p>
+              <p class="text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[1.9rem] text-gray-500">Drag and drop files here or click to upload</p>
             </div>
           </template>
         </FileUpload>
@@ -80,7 +80,7 @@
 
         <div class="flex justify-end mt-4">
           <Button type="submit" :loading="processing" :disabled="processing" label="Process Files"
-            class="p-button-primary custom-button text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem]" />
+            class="p-button-primary custom-button text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[1.9rem]" />
         </div>
       </form>
     </div>
