@@ -101,7 +101,7 @@
     </section>
 
     <!-- Upload Documents section -->
-    <section class="w-full my-24">
+    <section class="w-full my-24" id="input-form">
       <BaseSection>
         <UploadDocuments/>
       </BaseSection>
@@ -224,19 +224,19 @@
           <h2 class="text-4xl font-semibold">About Us</h2>
           <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Safety, security and compliance">
-              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
                 NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
                 cybersecurity audits conducted by the New York Department of Financial Services.
                 <span class="underline">Learn more</span> about our commitment to security.
               </p>
             </LandingListItem>
             <LandingListItem title="Hardware security keys">
-              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
                 With NEFA you can secure your account with a hardware security key via WebAuthn.
               </p>
             </LandingListItem>
             <LandingListItem title="SOC Certifications">
-              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
                 NEFA is <span class="underline">SOC 1 Type 2</span> and
                 <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
                 and custodian to complete these exams.
@@ -248,7 +248,7 @@
     </section>
 
     <!-- Getting started section -->
-    <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
+    <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-0 my-24 shadow lg:rounded-none sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
           Get started in just a few minutes
@@ -282,7 +282,7 @@
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
           <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
-          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
+          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6 2xl:text-4xl 3xl:text-5xl 4xl:text-[3rem] 5xl:text-[3.5rem] 6xl:text-[4rem]">Frequently asked questions</h2>
 
           <ul class="shadow-box">
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
@@ -296,11 +296,11 @@
         v-smooth-scroll
         data-aos="flip-down"
         data-aos-delay="150"
-        href="#navbar"
-        class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
+        href="#hero"
+        class="px-[2%] py-[1%] flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700 text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2.2rem]"
       >
         <span>Back to top</span>
-        <ArrowUpIcon :size="20" />
+        <ArrowUpIcon />
       </a>
     </div>
   </div>
