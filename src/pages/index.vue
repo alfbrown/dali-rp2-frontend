@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full">
+  <div class="w-full overflow-hidden">
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
-      <BaseSection class="mx-20">
+      <BaseSection class="md:mx-20">
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 2xl:mt-12 4xl:mt-16 5xl:mt-24 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
             ></span
@@ -108,8 +108,8 @@
     </section>
 
     <!-- Partners section -->
-    <section class="2xl:text-2xl 5xl:text-3xl bg-partner max-w-full overflow-hidden relative shadow">
-      <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
+    <section class="bg-partner relative max-w-full sm:mx-6 md:mx-0 my-24 shadow sm:rounded-2xl md:rounded-none overflow-hidden">
+      <div class="w-full text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[2rem] px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 data-aos="flip-down" class="text-neutral-800 font-semibold">Collaborators and Attribution</h3>
         <p data-aos="flip-down" class="paragraph">This project builds upon the work of many talented individuals and organizations</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center gap-6">
@@ -214,29 +214,29 @@
 
     <!-- Industry-leading security section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl 2xl:max-w-screen-5xl 4xl:max-w-screen-6xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-8 mx-auto 4xl:mx-40 5xl:mx-44 6xl:mx-[32rem] grid grid-cols-12 gap-x-6 2xl:gap-x-28 4xl:gap-x-32 5xl:gap-x-36 6xl:gap-x-42">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('@/assets/img/industry-leading-security.png')" class="w-full 2xl:w-4/5" alt="" />
+          <div class="w-full 2xl:w-[40rem] 3xl:w-[42rem] 4xl:w-[48rem] 5xl:w-[55rem] 6xl:w-[60rem]">
+            <img :src="require('@/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div data-aos="fade-left" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 class="2xl:text-5xl 4xl:text-7xl font-semibold text-4xl">About Us</h2>
-          <ul class="2xl:text-2xl 4xl:text-4xl sm:space-y-4 space-y-8">
+        <div data-aos="fade-left" class="col-span-12 lg:col-span-5 2xl:col-span-6 space-y-8 sm:space-y-6 mt-8 xl:px-8">
+          <h2 class="text-4xl font-semibold">About Us</h2>
+          <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Safety, security and compliance">
-              <p class="text-sm text-gray-700 leading-relaxed 2xl:text-xl 4xl:text-3xl">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
                 NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
                 cybersecurity audits conducted by the New York Department of Financial Services.
                 <span class="underline">Learn more</span> about our commitment to security.
               </p>
             </LandingListItem>
             <LandingListItem title="Hardware security keys">
-              <p class="text-sm text-gray-700 leading-relaxed 2xl:text-xl 4xl:text-3xl">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
                 With NEFA you can secure your account with a hardware security key via WebAuthn.
               </p>
             </LandingListItem>
             <LandingListItem title="SOC Certifications">
-              <p class="text-sm text-gray-700 leading-relaxed 2xl:text-xl 4xl:text-3xl">
+              <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem]  text-gray-700 leading-relaxed">
                 NEFA is <span class="underline">SOC 1 Type 2</span> and
                 <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
                 and custodian to complete these exams.
@@ -248,7 +248,7 @@
     </section>
 
     <!-- Getting started section -->
-    <section class="bg-trading-tools relative max-w-full my-24 shadow overflow-hidden">
+    <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
           Get started in just a few minutes
@@ -274,15 +274,15 @@
 
     <!-- FAQ section -->
     <section class="w-full my-24">
-      <BaseSection class="grid grid-cols-12">
+      <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('@/assets/img/faq.png')" class="2xl:w-5/6 w-full 5xl:w-4/6" alt="" />
+            <img :src="require('@/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
-          <span class="3xl:text-xl 5xl:text-2xl font-semibold mb-4 sm:mb-2 text-base text-gradient uppercase">Support</span>
-          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6 3xl:text-5xl 5xl:text-6xl">Frequently asked questions</h2>
+          <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
           <ul class="shadow-box">
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
