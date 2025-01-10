@@ -1,5 +1,5 @@
 <template>
-  <div class="h-12 w-28 2xl:h-14 2xl:w-32 3xl:h-16 3xl:w-36 4xl:h-[72px] 4xl:w-40 5xl:h-20 5xl:w-44 6xl:h-[133px] 6xl:w-80">
+  <div class="h-12 w-28 2xl:h-14 2xl:w-32 3xl:h-16 3xl:w-36 4xl:h-[72px] 4xl:w-40 5xl:h-20 5xl:w-44 6xl:h-[107px] 6xl:w-64">
     <Line ref="lineChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
