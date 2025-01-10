@@ -1,5 +1,5 @@
 <template>
-  <div class="md:p-8 w-[24rem] md:w-[44rem] lg:w-[82rem] xl:w-[85rem] 2xl:w-[95rem] 3xl:w-[108rem] 4xl:w-[115rem] 5xl:w-[129rem] 6xl:w-[175rem]">
+  <div class="md:p-8 w-[24rem] md:w-[44rem] lg:w-[63rem] xl:w-[85rem] 2xl:w-[95rem] 3xl:w-[108rem] 4xl:w-[115rem] 5xl:w-[129rem] 6xl:w-[175rem]">
     <div class="p-6 bg-white shadow-md">
       <h2 class="2xl:text-2xl 4xl:text-4xl font-bold mb-4 text-lg">Upload Your Documents</h2>
 
