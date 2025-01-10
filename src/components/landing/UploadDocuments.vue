@@ -1,7 +1,7 @@
 <template>
-  <div class="p-8 h-max md:w-max w-auto">
-    <div class="p-6 bg-white shadow-md mx-auto relative rounded-xl w-[25rem] md:w-[50rem] lg:w-[73rem]">
-      <h2 class="text-lg font-bold mb-4">Upload Your Documents</h2>
+  <div class="p-8 w-full">
+    <div class="p-6 bg-white shadow-md">
+      <h2 class="2xl:text-2xl 4xl:text-4xl font-bold mb-4 text-lg">Upload Your Documents</h2>
 
       <!-- Error/Success Messages -->
       <div v-if="errorMessage" class="mb-4 p-4 bg-red-100 text-red-700 rounded">
@@ -11,16 +11,16 @@
         {{ successMessage }}
       </div>
 
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="handleSubmit" class="2xl:text-lg 4xl:text-2xl">
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Select Country</label>
+          <label class="block text-sm 2xl:text-lg 4xl:text-3xl font-medium mb-2">Select Country</label>
           <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a country"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedCountry }" />
           <small v-if="submitted && !selectedCountry" class="text-red-500">Country is required</small>
         </div>
 
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Select Process</label>
+          <label class="block text-sm 2xl:text-lg 4xl:text-3xl font-medium mb-2">Select Process</label>
           <Dropdown v-model="selectedProcess" :options="processes" optionLabel="name" placeholder="Select a process"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedProcess }" />
           <small v-if="submitted && !selectedProcess" class="text-red-500">Process is required</small>
@@ -29,10 +29,10 @@
         <div class="mb-4" v-if="showSpotPriceOption">
           <div class="flex items-center">
             <Checkbox v-model="spotPrice" binary inputId="spot-price" />
-            <label for="spot-price" class="ml-2 text-sm">Use Internet Spot Price</label>
+            <label for="spot-price" class="ml-2 text-sm 2xl:text-lg 4xl:text-3xl">Use Internet Spot Price</label>
           </div>
           <div v-if="spotPrice" class="mt-2">
-            <label class="block text-sm font-medium mb-2">Select Platform</label>
+            <label class="block text-sm 2xl:text-lg 4xl:text-3xl font-medium mb-2">Select Platform</label>
             <Dropdown v-model="selectedPlatform" :options="platforms" optionLabel="name" placeholder="Select a platform"
               class="w-full" :class="{ 'p-invalid': submitted && spotPrice && !selectedPlatform }" />
             <small v-if="submitted && spotPrice && !selectedPlatform" class="text-red-500">
@@ -42,11 +42,11 @@
         </div>
 
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Accounting Options</label>
+          <label class="block text-sm 2xl:text-lg 4xl:text-3xl font-medium mb-2">Accounting Options</label>
           <div class="flex flex-col gap-2">
             <div v-for="option in accountingOptions" :key="option.value">
               <RadioButton v-model="selectedAccounting" :value="option.value" :inputId="option.value" />
-              <label :for="option.value" class="ml-2 text-sm">{{ option.name }}</label>
+              <label :for="option.value" class="2xl:text-base 4xl:text-2xl ml-2 text-sm">{{ option.name }}</label>
             </div>
           </div>
           <small v-if="submitted && !selectedAccounting" class="text-red-500">
@@ -60,7 +60,7 @@
           <template #empty>
             <div class="flex flex-col items-center justify-center p-6">
               <i class="pi pi-cloud-upload text-4xl mb-4"></i>
-              <p class="text-gray-500">Drag and drop files here or click to upload</p>
+              <p class="2xl:text-xl 4xl:text-3xl text-gray-500">Drag and drop files here or click to upload</p>
             </div>
           </template>
         </FileUpload>
@@ -80,7 +80,7 @@
 
         <div class="flex justify-end mt-4">
           <Button type="submit" :loading="processing" :disabled="processing" label="Process Files"
-            class="p-button-primary" />
+            class="p-button-primary 2xl:text-lg 4xl:text-3xl" />
         </div>
       </form>
     </div>
