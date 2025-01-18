@@ -1,4 +1,4 @@
-# nefa-vue3
+# DALI RP2 FRONTEND
 
 ## Project setup
 ```
