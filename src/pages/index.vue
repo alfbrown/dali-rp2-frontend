@@ -93,8 +93,8 @@
         <LandingCryptoStatistic
           data-aos="fade-up"
           data-aos-delay="300"
-          title="💎 Recently Added"
-          :datasets="recents"
+          title="⛈️ Top Losers"
+          :datasets="losers"
           class="lg:px-8"
         />
       </div>
@@ -317,6 +317,8 @@ import aosMixin from '@/mixins/aos';
 //import BaseButton from '@/components/base/Button.vue';
 import UploadDocuments from '@/components/landing/UploadDocuments.vue';
 import heroImage from '@/assets/img/tax-calculator.png';
+import CryptoAPI from '@/services/cryptoAPI'
+
 
 export default {
   name: 'IndexPage',
@@ -333,131 +335,16 @@ export default {
   },
   data() {
     return {
+      trendings: [],
+      topGainers: [],
+      losers: [],
+      loading: false,
+      error: null,
+      cryptoAPI: new CryptoAPI(),
       selected: 0,
-      dropdownConcurency: false,
-      dropdownCrypto: false,
-      currencySelected: {
-        img: 'country-icon/eng.png',
-        name: 'USD',
-      },
-      currencies: [
-        {
-          img: 'country-icon/eng.png',
-          name: 'USD',
-        },
-      ],
-      cryptoSelected: {
-        img: 'crypto-icon/bitcoin.png',
-        name: 'BTC',
-      },
-      cryptocurrencies: [
-        {
-          img: 'crypto-icon/bitcoin.png',
-          name: 'BTC',
-        },
-      ],
-      trendings: [
-        {
-          id: 1,
-          name: 'Bitcoin',
-          price: 43180.13,
-          logo: 'bitcoin.png',
-          increase: true,
-          data: [40, 35, 60, 75, 60, 75, 50],
-        },
-        {
-          id: 2,
-          name: 'Ethereum',
-          price: 3480.65,
-          logo: 'ethereum.png',
-          increase: false,
-          data: [25, 30, 60, 50, 80, 55, 80],
-        },
-        {
-          id: 3,
-          name: 'Solana',
-          price: 150.2,
-          logo: 'solana.png',
-          increase: true,
-          data: [40, 45, 40, 80, 50, 60, 35],
-        },
-        {
-          id: 4,
-          name: 'Dogecoin',
-          price: 0.1572,
-          logo: 'dogecoin.png',
-          increase: true,
-          data: [35, 70, 60, 80, 50, 60, 40],
-        },
-      ],
-      topGainers: [
-        {
-          id: 1,
-          name: 'PAPPAY',
-          price: 0.00374,
-          logo: 'pappay.png',
-          increase: true,
-          data: [30, 50, 45, 60, 70, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Bitcoin Asia',
-          price: 0.02096,
-          logo: 'bitcoin-asia.png',
-          increase: true,
-          data: [25, 60, 50, 60, 35, 50, 70],
-        },
-        {
-          id: 3,
-          name: 'MoonRock',
-          price: 0.004907,
-          logo: 'moonrock.png',
-          increase: true,
-          data: [40, 35, 40, 25, 50, 70, 45],
-        },
-        {
-          id: 4,
-          name: 'NinjaFloki',
-          price: 0.000123,
-          logo: 'ninjafloki.png',
-          increase: true,
-          data: [45, 35, 40, 30, 25, 45, 35],
-        },
-      ],
-      recents: [
-        {
-          id: 1,
-          name: 'MetaCraft',
-          price: 0.0608,
-          logo: 'metacraft.png',
-          increase: false,
-          data: [40, 50, 45, 60, 35, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Frog',
-          price: 0.5875,
-          logo: 'frog.png',
-          increase: false,
-          data: [25, 50, 45, 48, 40, 60, 45],
-        },
-        {
-          id: 3,
-          name: 'Musk Doge',
-          price: 0.04041,
-          logo: 'musk-doge.png',
-          increase: true,
-          data: [25, 35, 60, 45, 50, 45, 45],
-        },
-        {
-          id: 4,
-          name: '2SHARE',
-          price: 1366.24,
-          logo: '2share.png',
-          increase: true,
-          data: [35, 30, 60, 50, 35, 45, 40],
-        },
-      ],
+      heroImage,
+      //dropdownConcurency: false,
+      //dropdownCrypto: false,
       accordions: [
         {
           title: 'How does this work?',
@@ -505,10 +392,25 @@ export default {
             'Download your generated tax summary and report your capital gains and losses on your tax return.',
         },
       ],
-      heroImage,
+      
     }
   },
+  async created() {
+    try {
+      this.loading = true;
+      const { trendings, topGainers, losers } = await this.cryptoAPI.fetchTickers();
+      this.trendings = trendings;
+      this.topGainers = topGainers;
+      this.losers = losers;
+    } catch (error) {
+      console.error('Failed to fetch crypto data:', error);
+      this.error = 'Failed to load cryptocurrency data';
+    } finally {
+      this.loading = false;
+    }
+  }
 }
+
 </script>
 <style scoped>
 .text-header-gradient {

@@ -1,14 +1,7 @@
 <template>
   <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
-    <div class="w-full flex items-center justify-between">
+    <div class="w-full flex items-center justify-center">
       <span class="font-medium">{{ title }}</span>
-      <button
-        href="#"
-        class="px-3 py-1 text-sm font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
-      >
-        <span>More</span>
-        <ChevronRightIcon :size="16" />
-      </button>
     </div>
     <div class="flex flex-col">
       <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -25,7 +18,7 @@
               <tr v-for="data in datasets" :key="data.id" class="border-b border-gray-200">
                 <td class="py-4 whitespace-nowrap">
                   <div class="flex items-center space-x-2">
-                    <img :src="require(`@/assets/img/crypto-icon/${data.logo}`)" alt="" />
+                    <img :src="require('@/assets/img/crypto-icon/bitcoin.png')" alt="" />
                     <span>{{ data.name }}</span>
                   </div>
                 </td>
@@ -49,19 +42,18 @@
     </div>
   </div>
 </template>
+
 <script>
 import PlusThickIcon from 'vue-material-design-icons/PlusThick.vue'
 import MinusThickIcon from 'vue-material-design-icons/MinusThick.vue'
 import LineChart from '@/components/LineChart.vue'
-import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue'
 
 export default {
   name: 'LandingCryptoStatistic',
   components: {
     PlusThickIcon,
     MinusThickIcon,
-    LineChart,
-    ChevronRightIcon
+    LineChart
   },
   props: {
     title: {
