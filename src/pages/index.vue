@@ -258,16 +258,7 @@
           class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
           <LandingStep v-for="step in steps" :key="step.title" :step="step" />
-          <img
-            :src="require('@/assets/img/getting-started/arrow.png')"
-            class="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          />
-          <img
-            :src="require('@/assets/img/getting-started/arrow.png')"
-            class="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          />
+          
         </div>
       </div>
     </section>
@@ -374,19 +365,19 @@ export default {
       ],
       steps: [
         {
-          img: 'sign-up.png',
+         // img: 'sign-up.png',
           title: 'Upload',
           description:
             'Upload your crytocurrency transaction history from exchanges, wallets, and other sources to our platform',
         },
         {
-          img: 'fund.png',
+        //  img: 'fund.png',
           title: 'Generate',
           description:
             'Generate your tax reports using our platform. We support FIFO, LIFO, and HIFO methods for calculating taxes',
         },
         {
-          img: 'download.png',
+         // img: 'download.png',
           title: 'Download',
           description:
             'Download your generated tax summary and report your capital gains and losses on your tax return.',
