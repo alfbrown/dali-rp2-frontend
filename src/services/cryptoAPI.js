@@ -8,6 +8,11 @@ export default class CryptoAPI {
     });
     this.placeholderImage = require('@/assets/img/crypto-icon/bitcoin.png');
     this.stablecoins = ['USDT', 'USD', 'USDC'];
+    this.timeframes = {
+      POINTS: 7,           // Number of data points
+      INTERVAL: '2h',      // 1 hour intervals
+      DURATION: '24h'       // Total duration to show
+    };
   }
 
   async fetchTickers() {
@@ -29,6 +34,24 @@ export default class CryptoAPI {
     }
   }
 
+  async fetchHistoricalData(symbol, timeframe = this.timeframes.INTERVAL, limit = this.timeframes.POINTS) {
+    try {
+      const ohlcv = await this.exchange.fetchOHLCV(
+        symbol,
+        timeframe,
+        undefined,
+        limit
+      );
+      
+      return ohlcv.map(candle => ({
+        time: candle[0],
+        volume: candle[5]
+      }));
+    } catch (error) {
+      console.error('Error fetching historical data:', error);
+      return Array(this.timeframes.POINTS).fill({ time: Date.now(), volume: 0 });
+    }
+  }
   consolidatePairs(tickers) {
     const consolidated = {};
     
@@ -103,9 +126,27 @@ export default class CryptoAPI {
   }
 
   generateVolumeData(volume) {
-    const baseValue = volume / 1000000;
+    // Calculate dynamic scale factor
+    const scaleFactor = this.calculateScaleFactor(volume);
+    const baseValue = volume / scaleFactor;
+    
+    // Generate 7 points with meaningful variation
     return Array(7).fill(0).map(() => 
-      Math.floor(baseValue * (0.8 + Math.random() * 0.4))
+      Math.max(1, Math.floor(baseValue * (0.85 + Math.random() * 0.3)))
+    );
+  }
+
+  calculateScaleFactor(volume) {
+    // Find appropriate divisor to keep values between 1-100
+    const magnitude = Math.floor(Math.log10(volume));
+    return Math.pow(10, magnitude - 2);
+  }
+
+  generatePercentageData(percentage) {
+    // Scale percentage changes to visible chart movements
+    const baseValue = Math.abs(percentage) * 5;
+    return Array(7).fill(0).map((_, i) => 
+      Math.max(1, Math.floor(baseValue * ((i + 1) / 7)))
     );
   }
 
