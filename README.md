@@ -8,6 +8,8 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+
+If you're using Mac run npm run serve -- --host localhost --port 8080
 ```
 
 ### Compiles and minifies for production
