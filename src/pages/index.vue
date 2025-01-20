@@ -93,13 +93,8 @@
         <LandingCryptoStatistic
           data-aos="fade-up"
           data-aos-delay="300"
-<<<<<<< HEAD
-          title="💎 Top Losses"
-          :datasets="recents"
-=======
           title="⛈️ Top Losers"
           :datasets="losers"
->>>>>>> ccxt-api
           class="lg:px-8"
         />
       </div>
