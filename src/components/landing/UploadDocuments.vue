@@ -125,6 +125,7 @@ export default {
 
   data() {
     return {
+      API_URL: process.env.VUE_APP_API_BASE_URL,
       selectedCountry: '',
       selectedProcess: '',
       spotPrice: false,
@@ -263,12 +264,15 @@ export default {
           formData.append('files', file);
         });
 
-        const response = await fetch('http://localhost:8000/api/process', {
-          method: 'POST',
-          body: formData,
-          mode: 'cors'
+        const API_URL = process.env.VUE_APP_API_BASE_URL;
+        
+        // Then update the fetch calls:
+      const response = await fetch('/api/process', {
+      method: 'POST',
+      body: formData,
+      mode: 'cors'
         });
-
+        
         if (!response.ok) {
           throw new Error(await response.text());
         }
@@ -294,7 +298,7 @@ export default {
       if (!this.downloadUrl) return;
 
       try {
-        const response = await fetch(`http://localhost:8000${this.downloadUrl}`);
+        const response = await fetch(`${this.API_URL}${this.downloadUrl}`);
         if (!response.ok) throw new Error('Download failed');
 
         const blob = await response.blob();
