@@ -1,19 +1,14 @@
 <template>
   <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
-<<<<<<< HEAD
-    <div class="w-full flex items-center justify-between 3xl:h-12 6xl:h-16">
-      <span class="font-medium text-base 2xl:text-lg 3xl:text-[1.3rem] 4xl:text-2xl 5xl:text-[1.7rem] 6xl:text-[1.9rem]">{{ title }}</span>
+    <div class="w-full flex items-center justify-between">
+      <span class="font-medium">{{ title }}</span>
       <button
         href="#"
-        class="px-3 py-1 text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
+        class="px-3 py-1 text-sm font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
       >
         <span>More</span>
         <ChevronRightIcon :size="16" />
       </button>
-=======
-    <div class="w-full flex items-center justify-center">
-      <span class="font-medium">{{ title }}</span>
->>>>>>> ccxt-api
     </div>
     <div class="flex flex-col">
       <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
