@@ -14,7 +14,7 @@
       <form @submit.prevent="handleSubmit" class="2xl:text-lg 4xl:text-2xl">
         <div class="mb-4">
           <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Select Country</label>
-          <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a country"
+          <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" :optionDisabled="option => option.disabled" placeholder="Select a country"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedCountry }" />
           <small v-if="submitted && !selectedCountry" class="text-red-500">Country is required</small>
         </div>
@@ -139,11 +139,11 @@ export default {
       downloadUrl: '',
 
       countries: [
-        { name: 'Japan', value: 'Japan' },
-        { name: 'Europe', value: 'Europe' },
-        { name: 'US', value: 'US' },
-        { name: 'Spain', value: 'Spain' },
-        { name: 'Generic', value: 'Generic' }
+        { name: 'Japan', value: 'Japan', disabled: true },
+        { name: 'Europe', value: 'Europe', disabled: true },
+        { name: 'US', value: 'US', disabled: false },
+        { name: 'Spain', value: 'Spain', disabled: true },
+        { name: 'Generic', value: 'Generic', disabled: true }
       ],
       processes: [
         { name: 'DALI', value: 'DALI' },
