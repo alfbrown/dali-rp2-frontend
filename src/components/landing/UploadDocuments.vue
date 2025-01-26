@@ -312,7 +312,7 @@ export default {
         window.URL.revokeObjectURL(url);
 
         this.successMessage = 'Download complete';
-        this.resetForm();
+        //this.resetForm();
       } catch (error) {
         this.errorMessage = 'Failed to download: ' + error.message;
       }
