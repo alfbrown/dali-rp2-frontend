@@ -249,9 +249,9 @@ export default {
 
       try {
         const formData = new FormData();
-        formData.append('country', this.selectedCountry);
-        formData.append('process', this.selectedProcess);
-        formData.append('accounting', this.selectedAccounting);
+        formData.append('country', this.selectedCountry.value);
+        formData.append('process', this.selectedProcess.value);
+        formData.append('accounting', this.selectedAccounting.value);
 
         if (this.showSpotPriceOption) {
           formData.append('spot_price', this.spotPrice.toString());
@@ -264,10 +264,10 @@ export default {
           formData.append('files', file);
         });
 
-        const API_URL = process.env.VUE_APP_API_BASE_URL;
+        //const API_URL = process.env.VUE_APP_API_BASE_URL;
         
         // Then update the fetch calls:
-      const response = await fetch('/api/process', {
+      const response = await fetch(`${this.API_URL}/process`, {
       method: 'POST',
       body: formData,
       mode: 'cors'
