@@ -212,36 +212,32 @@
       </div>
     </section-->
 
-    <!-- Industry-leading security section -->
-    <section class="w-full my-24">
+     <!-- About Us Section -->
+     <section class="w-full my-24">
       <div class="relative max-w-screen-xl px-8 mx-auto 4xl:mx-40 5xl:mx-44 6xl:mx-[32rem] grid grid-cols-12 gap-x-6 2xl:gap-x-28 4xl:gap-x-32 5xl:gap-x-36 6xl:gap-x-42">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full 2xl:w-[40rem] 3xl:w-[42rem] 4xl:w-[48rem] 5xl:w-[55rem] 6xl:w-[60rem]">
-            <img :src="require('@/assets/img/industry-leading-security.png')" class="w-full" alt="" />
+            <img :src="require('@/assets/img/industry-leading-security.png')" class="w-full" alt="Cryptocurrency tax calculation interface" />
           </div>
         </div>
         <div data-aos="fade-left" class="col-span-12 lg:col-span-5 2xl:col-span-6 space-y-8 sm:space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">About Us</h2>
           <ul class="space-y-8 sm:space-y-4">
-            <LandingListItem title="Safety, security and compliance">
+            <AboutListItem title="Privacy-First Approach">
               <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
-                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
-                cybersecurity audits conducted by the New York Department of Financial Services.
-                <span class="underline">Learn more</span> about our commitment to security.
+                We prioritize your privacy and security. Our platform is designed to handle your transaction data without storing it, ensuring your information remains confidential.
               </p>
-            </LandingListItem>
-            <LandingListItem title="Hardware security keys">
+            </AboutListItem>
+            <AboutListItem title="Powerful Tools Made Simple">
               <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
-                With NEFA you can secure your account with a hardware security key via WebAuthn.
+                Upload your transaction files and let our platform handle the complexities. Whether you choose DaLI, RP2, or both, we'll calculate your tax cost basis for you.
               </p>
-            </LandingListItem>
-            <LandingListItem title="SOC Certifications">
+            </AboutListItem>
+            <AboutListItem title="Free and Accessible">
               <p class="text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] text-gray-700 leading-relaxed">
-                NEFA is <span class="underline">SOC 1 Type 2</span> and
-                <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
-                and custodian to complete these exams.
+                Our service is completely free to use, making cryptocurrency tax compliance accessible to everyone - from individual investors to tax professionals and businesses.
               </p>
-            </LandingListItem>
+            </AboutListItem>
           </ul>
         </div>
       </div>
@@ -302,21 +298,24 @@ import BaseSection from '@/components/base/Section.vue'
 import LandingCryptoStatistic from '@/components/landing/CryptoStatistic.vue'
 import BaseAccordion from '@/components/base/Accordion.vue';
 import LandingStep from '@/components/landing/Step.vue';
-import LandingListItem from '@/components/landing/ListItem.vue';
+//import LandingListItem from '@/components/landing/ListItem.vue';
 import ArrowUpIcon from 'vue-material-design-icons/ArrowUp.vue';
 import aosMixin from '@/mixins/aos';
 //import BaseButton from '@/components/base/Button.vue';
 import UploadDocuments from '@/components/landing/UploadDocuments.vue';
 import heroImage from '@/assets/img/tax-calculator.png';
 import CryptoAPI from '@/services/cryptoAPI'
+import AboutListItem from '@/components/landing/AboutListItem.vue'
+
 
 
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
   components: {
+    AboutListItem,
     BaseSection,
-    LandingListItem,
+   // LandingListItem,
     BaseAccordion,
     LandingStep,
     ArrowUpIcon,
@@ -341,6 +340,11 @@ export default {
           title: 'How does this work?',
           description:
               "Our platform offers a simple, web-based interface for calculating cryptocurrency taxes using the powerful, privacy-focused tools DaLI and RP2. Whether you’re an individual investor, tax professional, or business, you can choose to run DaLI, RP2, or a combined process by uploading your transaction and configuration CSV files directly on our site. We handle all the technical details without storing your data, ensuring your privacy and security. Once processed, you’ll receive a ZIP file with your tax results, including Form 8949. Best of all, our service is completely free to use. For a detailed walkthrough, please visit our: <a href='https://blog.com' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>Blog Post</a>"
+        },
+        {
+          title: 'How accurate is this?',
+          description:
+              "While our tools have been successfully used by many for cryptocurrency tax calculations, we encourage users to exercise their own judgment and compare results with other platforms. We strive for accuracy but assume no liability for any discrepancies. The final responsibility for tax reporting lies with the user. We recommend verifying calculations and consulting with tax professionals when needed."
         },
         {
           title: 'How much does this cost?',
