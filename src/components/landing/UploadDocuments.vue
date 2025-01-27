@@ -14,7 +14,7 @@
       <form @submit.prevent="handleSubmit" class="2xl:text-lg 4xl:text-2xl">
         <div class="mb-4">
           <label class="block text-sm 2xl:text-base 3xl:text-lg 4xl:text-[1.3rem] 5xl:text-2xl 6xl:text-[1.7rem] font-medium mb-2">Select Country</label>
-          <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a country"
+          <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" :optionDisabled="option => option.disabled" placeholder="Select a country"
             class="w-full" :class="{ 'p-invalid': submitted && !selectedCountry }" />
           <small v-if="submitted && !selectedCountry" class="text-red-500">Country is required</small>
         </div>
@@ -125,6 +125,7 @@ export default {
 
   data() {
     return {
+      API_URL: process.env.VUE_APP_API_BASE_URL,
       selectedCountry: '',
       selectedProcess: '',
       spotPrice: false,
@@ -138,11 +139,11 @@ export default {
       downloadUrl: '',
 
       countries: [
-        { name: 'Japan', value: 'Japan' },
-        { name: 'Europe', value: 'Europe' },
-        { name: 'US', value: 'US' },
-        { name: 'Spain', value: 'Spain' },
-        { name: 'Generic', value: 'Generic' }
+        { name: 'Japan', value: 'Japan', disabled: true },
+        { name: 'Europe', value: 'Europe', disabled: true },
+        { name: 'US', value: 'US', disabled: false },
+        { name: 'Spain', value: 'Spain', disabled: true },
+        { name: 'Generic', value: 'Generic', disabled: true }
       ],
       processes: [
         { name: 'DALI', value: 'DALI' },
@@ -248,9 +249,9 @@ export default {
 
       try {
         const formData = new FormData();
-        formData.append('country', this.selectedCountry);
-        formData.append('process', this.selectedProcess);
-        formData.append('accounting', this.selectedAccounting);
+        formData.append('country', this.selectedCountry.value);
+        formData.append('process', this.selectedProcess.value);
+        formData.append('accounting', this.selectedAccounting.value);
 
         if (this.showSpotPriceOption) {
           formData.append('spot_price', this.spotPrice.toString());
@@ -263,12 +264,15 @@ export default {
           formData.append('files', file);
         });
 
-        const response = await fetch('http://localhost:8000/api/process', {
-          method: 'POST',
-          body: formData,
-          mode: 'cors'
+        //const API_URL = process.env.VUE_APP_API_BASE_URL;
+        
+        // Then update the fetch calls:
+      const response = await fetch(`${this.API_URL}/process`, {
+      method: 'POST',
+      body: formData,
+      mode: 'cors'
         });
-
+        
         if (!response.ok) {
           throw new Error(await response.text());
         }
@@ -294,7 +298,7 @@ export default {
       if (!this.downloadUrl) return;
 
       try {
-        const response = await fetch(`http://localhost:8000${this.downloadUrl}`);
+        const response = await fetch(`${this.API_URL}${this.downloadUrl}`);
         if (!response.ok) throw new Error('Download failed');
 
         const blob = await response.blob();
@@ -308,6 +312,7 @@ export default {
         window.URL.revokeObjectURL(url);
 
         this.successMessage = 'Download complete';
+        //this.resetForm();
       } catch (error) {
         this.errorMessage = 'Failed to download: ' + error.message;
       }

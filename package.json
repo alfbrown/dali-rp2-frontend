@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --mode development",
+    "serve:prod": "vue-cli-service serve --mode production",
+    "build": "vue-cli-service build --mode production",
+    "build:dev": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -13,6 +15,7 @@
     "ccxt": "^4.4.49",
     "chart.js": "^4.4.7",
     "core-js": "^3.8.3",
+    "lucide-vue-next": "^0.474.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
     "vue": "^3.2.13",
