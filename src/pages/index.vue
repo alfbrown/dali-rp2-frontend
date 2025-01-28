@@ -132,6 +132,12 @@
               class="text-blue-600 hover:text-blue-800 underline">Freepik</a>
             </p>
           </div>
+          <div class="text-center p-4">
+            <p class="text-gray-700">
+              Icons: From<a href="https://lucide.dev" target="_blank" rel="noopener noreferrer" 
+              class="text-blue-600 hover:text-blue-800 underline">Lucide</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
