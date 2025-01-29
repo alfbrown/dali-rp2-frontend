@@ -267,7 +267,7 @@ export default {
         //const API_URL = process.env.VUE_APP_API_BASE_URL;
         
         // Then update the fetch calls:
-      const response = await fetch(`${this.API_URL}/api/process`, {
+      const response = await fetch(`${this.API_URL}/process`, {
       method: 'POST',
       body: formData,
       mode: 'cors',
