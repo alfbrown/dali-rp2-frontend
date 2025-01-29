@@ -267,7 +267,7 @@ export default {
         //const API_URL = process.env.VUE_APP_API_BASE_URL;
         
         // Then update the fetch calls:
-      const response = await fetch(`${this.API_URL}/process`, {
+      const response = await fetch(`${this.API_URL}/api/process`, {
       method: 'POST',
       body: formData,
       mode: 'cors',
@@ -299,7 +299,7 @@ export default {
       if (!this.downloadUrl) return;
 
       try {
-        const response = await fetch(`${this.API_URL}${this.downloadUrl}`);
+        const response = await fetch(`${this.API_URL}/api/${this.downloadUrl}`);
         if (!response.ok) throw new Error('Download failed');
 
         const blob = await response.blob();
