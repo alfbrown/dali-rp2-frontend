@@ -299,7 +299,7 @@ export default {
       if (!this.downloadUrl) return;
 
       try {
-        const response = await fetch(`${this.API_URL}/api/${this.downloadUrl}`);
+        const response = await fetch(`${this.API_URL}/api${this.downloadUrl}`);
         if (!response.ok) throw new Error('Download failed');
 
         const blob = await response.blob();
