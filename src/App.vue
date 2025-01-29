@@ -7,7 +7,7 @@
       <!--BaseNavbar /-->
 
       <main class="text-neutral-800">
-        <Index />
+        <router-view />
       </main>
 
       <BaseFooter />
@@ -15,13 +15,11 @@
   </div>
 </template>
 <script>
-import Index from '@/pages/index.vue';
 import BaseFooter from '@/components/base/Footer.vue';
 // import BaseNavbar from '@/components/base/NavbarComponent.vue'
 export default {
   name: 'App',
   components: {
-    Index,
    // BaseNavbar,
     BaseFooter
   }
