@@ -13,8 +13,10 @@
         </div>
         <div class="card-content p-4">
           <div class="flex gap-4">
+            <!-- Download button with download attribute -->
             <a 
               :href="doc.docLink"
+              download="test.docx"
               class="flex items-center gap-2 text-blue-600 hover:text-blue-800"
             >
               <i class="file-text-icon"></i>
@@ -44,18 +46,19 @@ export default {
       documentations: [
         {
           title: "User Registration Guide",
-          docLink: "/docs/user-registration-guide.docx",
-          videoLink: "https://youtube.com/watch?v=user-registration-demo"
+          // Update docLink if needed, here using test.docx as the file to download.
+          docLink: "/docs/test.docx",
+          videoLink: "https://www.youtube.com/watch?v=pBy1zgt0XPc"
         },
         {
           title: "Content Management System Manual",
-          docLink: "/docs/cms-manual.docx",
-          videoLink: "https://youtube.com/watch?v=cms-walkthrough"
+          docLink: "/docs/test.docx",
+          videoLink: "https://www.youtube.com/watch?v=pBy1zgt0XPc"
         },
         {
           title: "API Integration Documentation",
-          docLink: "/docs/api-integration-guide.docx",
-          videoLink: "https://youtube.com/watch?v=api-integration-demo"
+          docLink: "/docs/test.docx",
+          videoLink: "https://www.youtube.com/watch?v=pBy1zgt0XPc"
         }
       ]
     }

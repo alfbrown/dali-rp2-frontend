@@ -3,7 +3,7 @@
     <div class="relative">
       <div v-if="$route.path === '/'" class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient">
       </div>
-      <!--BaseNavbar /-->
+      <BaseNavbar v-if="$route.path !== '/'" />
 
       <main class="text-neutral-800">
         <router-view />
@@ -15,11 +15,11 @@
 </template>
 <script>
 import BaseFooter from '@/components/base/Footer.vue';
-// import BaseNavbar from '@/components/base/NavbarComponent.vue'
+import BaseNavbar from '@/components/base/NavbarComponent.vue'
 export default {
   name: 'App',
   components: {
-    // BaseNavbar,
+    BaseNavbar,
     BaseFooter
   }
 }
