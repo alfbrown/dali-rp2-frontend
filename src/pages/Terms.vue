@@ -1,6 +1,6 @@
 <template>
     <section class=""
-        style="background-image: url('privacy-bg.png'); background-size: cover; height: 56vh; background-repeat: no-repeat;background-position: center;">
+        style="background-image: url('privacy-bg.png'); background-size: cover; background-repeat: no-repeat;background-position: center;">
         <div class="container px-4 mx-auto h-full flex justify-center items-center">
             <h1 class="text-white text-3xl md:text-4xl font-bold tracking-tighter">Terms of Service</h1>
         </div>

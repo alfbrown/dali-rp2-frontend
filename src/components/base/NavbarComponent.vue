@@ -2,7 +2,7 @@
   <nav id="navbar" class="relative z-10 w-full bg-white shadow-md text-neutral-800">
     <div class="max-w-screen-xl mx-auto px-8 py-4 flex items-center justify-between">
       <div>
-        <img src="@/assets/img/logo/nefa.svg" class="w-24 xl:w-28" alt="Nefa Logo" />
+        <!-- <img src="@/assets/img/logo/nefa.svg" class="w-24 xl:w-28" alt="Nefa Logo" /> -->
       </div>
       <div class="hidden lg:flex space-x-6">
         <router-link
