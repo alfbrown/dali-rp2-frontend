@@ -3,7 +3,7 @@
         <img src="@/assets/images/privacyheader.jpg" alt="Header Image"/>
     </section-->
 
-    <section class="py-20 xl:pb-28 bg-white"
+    <section class="mt-10 xl:pb-28 bg-white"
         style="background-image: url('pattern-white.svg'); background-position: center;">
         <div class="container px-4 mx-auto">
             <div class="flex flex-wrap -mx-4">

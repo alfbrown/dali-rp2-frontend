@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-8">System Documentation</h1>
+  <div class="container mx-[14.5rem] mt-4 p-6 h-[80vh]">  
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tighter">System Documentation</h1>
     
-    <div class="grid gap-6">
+    <div class="grid gap-6 py-10">
       <div 
         v-for="(doc, index) in documentations" 
         :key="index"
-        class="card w-full bg-white rounded-lg shadow-md"
+        class="card w-[80%] bg-white rounded-lg shadow-md"
       >
         <div class="card-header p-4 border-b">
           <h2 class="text-xl font-semibold">{{ doc.title }}</h2>

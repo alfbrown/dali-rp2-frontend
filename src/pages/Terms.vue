@@ -1,12 +1,11 @@
 <template>
-    <section class=""
-        style="background-image: url('privacy-bg.png'); background-size: cover; background-repeat: no-repeat;background-position: center;">
+    <section class="" style="background-image: url('privacy-bg.png'); background-size: cover; background-repeat: no-repeat;background-position: center;">
         <div class="container px-4 mx-auto h-full flex justify-center items-center">
             <h1 class="text-white text-3xl md:text-4xl font-bold tracking-tighter">Terms of Service</h1>
         </div>
     </section>
 
-    <section class="py-20 xl:pb-28 bg-white">
+    <section class="xl:pb-28 bg-white">
         <div class="container px-4 mx-auto">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full lg:w-9/12 px-4 mb-5 lg:mb-0 mx-auto">
