@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-[14.5rem] mt-4 p-6 h-[80vh]">  
+  <div class="container mx-[16%] 2xl:mx-[13.5%] 3xl:mx-[12.5%] 4xl:mx-[13.5%] 5xl:mx-[18.5%] 6xl:mx-[29%] mt-4 p-6 h-[80vh]">  
     <h1 class="text-3xl md:text-4xl font-bold tracking-tighter">System Documentation</h1>
     
     <div class="grid gap-6 py-10">
       <div 
         v-for="(doc, index) in documentations" 
         :key="index"
-        class="card w-[80%] bg-white rounded-lg shadow-md"
+        class="card w-[75%] bg-white rounded-lg shadow-md"
       >
         <div class="card-header p-4 border-b">
           <h2 class="text-xl font-semibold">{{ doc.title }}</h2>
